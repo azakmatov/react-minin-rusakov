@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+let webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
@@ -6,4 +6,16 @@ module.exports = {
         path: __dirname + '/public',
         filename: 'bundle.js',
     },
+    module: {
+        rules: [
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'less-loader',
+                ]
+            }
+        ]
+    }
 }

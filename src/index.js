@@ -1,6 +1,6 @@
 let $ = require('jquery');
 let str = require('./constant');
-
+require ('./less');
 let App = function() {
     console.log(str);
     $('body').html(str);
@@ -8,4 +8,4 @@ let App = function() {
 
 let app = new App();
 
-app.get = () => {};
+app.get = function(){};
